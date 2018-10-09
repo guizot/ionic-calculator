@@ -14,3 +14,66 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../assets/fonts/icomoon.eot?csqkg4');
+    src:  url('../assets/fonts/icomoon.eot?csqkg4#iefix') format('embedded-opentype'),
+      url('../assets/fonts/icomoon.ttf?csqkg4') format('truetype'),
+      url('../assets/fonts/icomoon.woff?csqkg4') format('woff'),
+      url('../assets/fonts/icomoon.svg?csqkg4#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-cerah:before {
+    content: "\e900";
+  }
+  .icon-message:before {
+    content: "\e901";
+  }
+  .icon-notification:before {
+    content: "\e902";
+  }
+  .icon-petir:before {
+    content: "\e903";
+  }
+  .icon-setting:before {
+    content: "\e904";
+  }
+  
+
+  @mixin makeIcon($arg, $val) {
+    .ion-ios-#{$arg}:before ,
+    .ion-ios-#{$arg}-circle:before ,
+    .ion-ios-#{$arg}-circle-outline:before ,
+    .ion-ios-#{$arg}-outline:before ,
+    .ion-md-#{$arg}:before ,
+    .ion-md-#{$arg}-circle:before ,
+    .ion-md-#{$arg}-circle-outline:before ,
+    .ion-md-#{$arg}-outline:before  {
+      content: $val;
+      font-size: 30px;
+    }
+  }
+  
+  @include makeIcon(icon-cerah, "\e900");
+  @include makeIcon(icon-message, "\e901");
+  @include makeIcon(icon-notification, "\e902");
+  @include makeIcon(icon-petir, "\e903");
+  @include makeIcon(icon-setting, "\e904");

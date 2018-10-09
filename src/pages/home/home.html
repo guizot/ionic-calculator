@@ -1,18 +1,82 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+  <!-- <ion-navbar class="div-navbar" color="primary">
+    <ion-title>Calculator</ion-title>
+    <ion-buttons end>
+        <ion-icon name="icon-notification"></ion-icon>
+      </ion-buttons>
+  </ion-navbar> -->
+
+  <div class="div-display">
+    <!-- <ion-row>
+      <ion-col>
+        <div class="icon-setting"></div>
+      </ion-col>
+    </ion-row> -->
+    <span class="div-operator">{{ displayTemp | number }}</span>    
+    <span>{{ displayOperator }}</span>
+    <p>{{displayNumber1 | number}}</p>
+  </div>
+
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content>
+  <ion-row>
+    <ion-col (click)="numberPad('1')" col-3>
+      1
+    </ion-col>
+    <ion-col (click)="numberPad('2')" col-3>
+      2
+    </ion-col>
+    <ion-col (click)="numberPad('3')" col-3>
+      3
+    </ion-col>
+    <ion-col (click)="operatorPad('+')" col-3>
+      +
+    </ion-col>
+  </ion-row>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <ion-row>
+    <ion-col (click)="numberPad('4')" col-3>
+      4
+    </ion-col>
+    <ion-col (click)="numberPad('5')" col-3>
+      5
+    </ion-col>
+    <ion-col (click)="numberPad('6')" col-3>
+      6
+    </ion-col>
+    <ion-col (click)="operatorPad('-')" col-3>
+      -
+    </ion-col>
+  </ion-row>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-row>
+    <ion-col (click)="numberPad('7')" col-3>
+      7
+    </ion-col>
+    <ion-col (click)="numberPad('8')" col-3>
+      8
+    </ion-col>
+    <ion-col (click)="numberPad('9')" col-3>
+      9
+    </ion-col>
+    <ion-col (click)="operatorPad('/')" col-3>
+      /
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col (click)="clear('c')" col-3>
+      C
+    </ion-col>
+    <ion-col (click)="numberPad('0')" col-3>
+      0
+    </ion-col>
+    <ion-col (click)="equalPad('=')" col-3>
+      =
+    </ion-col>
+    <ion-col (click)="operatorPad('*')" col-3>
+      *
+    </ion-col>
+  </ion-row>
 </ion-content>

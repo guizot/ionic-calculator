@@ -1,3 +1,64 @@
 page-home {
+    .div-navbar{
+        text-align: center !important;
+        color: #ffffff !important;
+    }
+
+    .div-display{
+        position: relative;
+        min-height: 180px;
+        background-color: #2c2f58 !important;
+        p{
+            -webkit-text-fill-color: #ffffff !important;
+            font-size: 2.5em;
+            // font-weight: bold;            
+            margin: 0px;
+            padding: 0px 25px 15px 0px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        span{
+            -webkit-text-fill-color: #ffffff !important;
+            font-size: 1.8em;
+            font-weight: 100;            
+            margin: 0px;
+            padding: 0px 25px 70px 0px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        .div-operator{
+            padding: 0px 25px 100px 0px !important;
+        }
+        ion-row{
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-top: 9px;
+        }
+        .icon-setting{
+            color: #fff !important;
+            padding-left: 15px;
+            padding-top: 5px;            
+            font-size: 1.8em;            
+        }
+    }
+
+    ion-content{
+        background-color: #f1605d !important;
+        -webkit-text-fill-color: #fff !important; 
+        text-align: center !important;
+        line-height: 100px;
+        ion-col{
+            position: absolute;
+            font-size: 2em;
+            font-weight: 100; 
+        }
+    }
+
+    .scroll-content {
+        overflow: hidden;
+    }
 
 }
